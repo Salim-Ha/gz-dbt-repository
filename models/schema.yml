@@ -55,3 +55,85 @@ sources:
             description: "Cout logistique asscocié à l'expedition"
           - name: ship_cost
             description: "Cout total de l'expedition de la commande"
+      
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: "Données concernant les campagnes avec coût et prix"
+        columns:
+          - name: date_date
+            description: "la date"
+          
+          - name: paid_source
+            description: "source de revenue"
+          - name: campaign_key
+            description: "réf de campagne"
+          - name: camPGN_name
+            description: "nom de la campagne"
+          - name: ads_cost
+            description: "cout de pub"
+          - name: impression
+            description: "l'impression"
+          - name: click
+            description: "les clikcs"
+            
+            
+      - name: bing
+        identifier: raw_gz_bing
+        description: "Données concernant les bing"
+        columns:
+          - name: date_date
+            description: "la date"
+          
+          - name: paid_source
+            description: "type de revenue"
+          - name: campaign_key
+            description: "réf de campagne"
+          - name: camPGN_name
+            description: "nom de la campagne"
+          - name: ads_cost
+            description: "cout de pub"
+          - name: impression
+            description: "l'impression"
+          - name: click
+            description: "les clikcs"
+
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: "Données concernant criteo"
+        columns:
+          - name: date_date
+            description: "la date"
+          
+          - name: paid_source
+            description: "type de revenue"
+          - name: campaign_key
+            description: "réf de campagne"
+          - name: camPGN_name
+            description: "nom de la campagne"
+          - name: ads_cost
+            description: "cout de pub"
+          - name: impression
+            description: "l'impression"
+          - name: click
+            description: "les clikcs"
+
+
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: "Données concernant facebook"
+        columns:
+          - name: date_date
+            description: "la date"
+          
+          - name: paid_source
+            description: "type de revenue"
+          - name: campaign_key
+            description: "réf de campagne"
+          - name: camPGN_name
+            description: "nom de la campagne"
+          - name: ads_cost
+            description: "cout de pub"
+          - name: impression
+            description: "l'impression"
+          - name: click
+            description: "les clikcs"

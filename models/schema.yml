@@ -1,0 +1,57 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: gz_raw_data
+    tables:
+      - name: product
+        identifier: raw_gz_product
+        description: product of greenweez
+        columns:
+          - name: products_id
+            description: "les produits c'est trop cool"
+            tests:
+              - unique
+              - not_null
+
+          - name: purchase_price
+            description: "Les prix c'est cool aussi"
+
+      - name: sales
+        identifier: raw_gz_sales
+        description: "Les sales of greenweez"
+        columns:
+          - name: date_date
+            description: "Les dates d'achats"
+
+          - name: orders_id
+            description: "Les commandes des sales"
+
+          - name: pdt_id
+            description: "Les produits des sales"
+
+          - name: revenue
+            description: "Les revenus par ventes"
+
+          - name: quantity
+            description: "Les quantité de produits vendus"
+        tests:
+          - unique:
+              column_name: "(orders_id || '-' || pdt_id)"
+
+      - name: ship
+        identifier: raw_gz_ship
+        description: "Données sur les frais de livraison et les couts de logistics"
+        columns:
+          - name: orders_id
+            description: "Identifier unique de la commande liée aux frais de livraison"
+            tests:
+              - unique
+              - not_null
+
+          - name: shipping_fee_1
+            description: "Frais de livraison facturé à la commande"
+          - name: logcost
+            description: "Cout logistique asscocié à l'expedition"
+          - name: ship_cost
+            description: "Cout total de l'expedition de la commande"

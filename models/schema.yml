@@ -136,13 +136,12 @@ sources:
             description: "l'impression"
           - name: click
             description: "les clikcs"
-
-      - name: campaigns
-        identifier: int_campaigns
-
-          
-        tests:
+models:
+  - name: int_campaign
+    columns:
+        - name: campaign_key
+          description: "les campagne c'est cool"
+    tests:
           - unique:
-              column_name: "(date_date || '_'|| campaign_key)"
-
+              column_name: "(date_date || '_'|| campaign_key || '_' || paid_source)"
        

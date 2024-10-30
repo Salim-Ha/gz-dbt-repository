@@ -124,7 +124,6 @@ sources:
         columns:
           - name: date_date
             description: "la date"
-          
           - name: paid_source
             description: "type de revenue"
           - name: campaign_key
